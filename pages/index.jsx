@@ -127,7 +127,7 @@ export default function Home() {
   return (
     <div className="relative">
       <Head>
-        <title>Web3 Landing Page</title>
+        <title>CHAOS.</title>
         <meta name="description" content="Web3 Landing Page" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
