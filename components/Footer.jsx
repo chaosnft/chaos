@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="w-1/3 flex flex-col space-y-4 mt-5 ml-10">
           {[
             { text: 'About Us', href: '#squares', isExternal: false },
-            { text: 'Contact', href: 'mailto:contact@chaosnft.xyz', isExternal: true },
+            { text: 'Contact', href: 'https://form.typeform.com/to/rY6T3FRq', isExternal: true },
           ].map((item, index) => (
             <motion.a
               key={index}
