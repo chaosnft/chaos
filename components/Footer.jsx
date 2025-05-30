@@ -12,7 +12,7 @@ export default function Footer() {
 
   const socialLinks = [
     { platform: 'x', url: 'https://x.com/chaosnft_xyz', icon: '/icons/x.png' },
-    { platform: 'discord', url: '', icon: '/icons/discord.png' },
+    { platform: 'discord', icon: '/icons/discord.png' },
   ];
 
   return (

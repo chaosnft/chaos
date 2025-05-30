@@ -21,10 +21,9 @@ export default function Menu() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Định nghĩa các liên kết mạng xã hội
   const socialLinks = [
     { platform: 'x', url: 'https://x.com/chaosnft_xyz', icon: '/icons/x.png' },
-    { platform: 'discord', url: '', icon: '/icons/discord.png' },
+    { platform: 'discord', icon: '/icons/discord.png' },
   ];
 
   return (
@@ -87,7 +86,7 @@ export default function Menu() {
         <div className="relative h-full flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 md:px-8 py-4">
           <div className="flex flex-col justify-between h-full w-full md:w-1/2">
             <div className="flex flex-col space-y-4">
-              {/* Nội dung nếu cần */}
+              {/**/}
             </div>
             <div className="absolute bottom-6 sm:bottom-8 left-4 sm:left-6 flex space-x-2 sm:space-x-2 text-dark-brown z-50">
               {socialLinks.map(({ platform, url, icon }) => (

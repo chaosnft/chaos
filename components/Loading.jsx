@@ -59,8 +59,8 @@ export default function Loading({ onComplete }) {
           />
         </div>
         <AnimatedTextTyping
-          text="Loading..."
-          className="text-[32px] sm:text-[36px] md:text-[40px] font-bold text-navy-black text-center"
+          text="Get ready for an epic journey...!"
+          className="text-[16px] sm:text-[22px] md:text-[26px] font-bold text-navy-black text-center"
         />
         <div className="w-2/3 sm:w-2/3 md:w-2/3 lg:w-7/12 h-7 sm:h-7.5 md:h-9 bg-dark-brown rounded-full relative border-4 border-black">
           <motion.div

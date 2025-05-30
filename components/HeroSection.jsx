@@ -28,11 +28,11 @@ export default function HeroSection() {
         className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-navy-black mb-4 uppercase"
       />
         <AnimatedText
-          text="THE FOUNDATIONS OF CONNECTION"
+          text="The foundations of connection ,"
           className="text-sm sm:text-lg md:text-xl lg:text-2xl text-navy-black whitespace-normal overflow-wrap break-word"
         />
         <AnimatedText
-          text="CREATIVITY AND ART."
+          text=" creativity and art."
           className="text-sm sm:text-lg md:text-xl lg:text-2xl text-navy-black whitespace-normal overflow-wrap break-word"
         />
       </div>
