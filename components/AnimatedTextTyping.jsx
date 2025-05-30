@@ -2,7 +2,6 @@ import { motion, useInView } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
 
 export default function AnimatedTextTyping({ text, className = '' }) {
-    // Kiểm tra text để tránh lỗi undefined
     if (!text || typeof text !== 'string') {
         console.warn('AnimatedTextTyping: Invalid text prop', text);
         return <span className={className}>Invalid text</span>;
@@ -11,10 +10,10 @@ export default function AnimatedTextTyping({ text, className = '' }) {
     const [displayedText, setDisplayedText] = useState('');
     const [isTypingComplete, setIsTypingComplete] = useState(false);
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, amount: 0.3 }); // Chạy 1 lần khi 30% component vào view
+    const isInView = useInView(ref, { once: true, amount: 0.3 }); 
 
     useEffect(() => {
-        if (!isInView) return; // Không chạy nếu không trong viewport
+        if (!isInView) return; 
 
         setDisplayedText('');
         setIsTypingComplete(false);
@@ -28,7 +27,7 @@ export default function AnimatedTextTyping({ text, className = '' }) {
                 setIsTypingComplete(true);
                 clearInterval(typingInterval);
             }
-        }, 200); // Tốc độ đánh chữ: 100ms mỗi ký tự
+        }, 200);
 
         return () => clearInterval(typingInterval);
     }, [isInView, text]);

@@ -3,7 +3,7 @@ import AnimatedText from './AnimatedText';
 
 export default function Marquee() {
   const singleText = 'WHITELIST OPEN !!     ';
-  const text = singleText.repeat(10); // Giảm số lần lặp
+  const text = singleText.repeat(10); 
 
   return (
     <div className="w-full overflow-hidden bg-navy-black border-t-4 border-b-4 border-dark-brown">
@@ -11,7 +11,7 @@ export default function Marquee() {
         <motion.div
           initial={{ x: '-50%' }}
           animate={{ x: '100%' }}
-          transition={{ repeat: Infinity, duration: 50, ease: 'linear' }} // Giảm duration
+          transition={{ repeat: Infinity, duration: 50, ease: 'linear' }} 
           className="whitespace-nowrap"
         >
           <AnimatedText

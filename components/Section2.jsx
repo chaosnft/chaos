@@ -12,7 +12,7 @@ export default function Section2() {
             We strive to build a passionate community where elemental stories are told through unique NFT art and fashion.Sign up to get a Whitelist spot and start your journey
           </p>
           <a
-            href="https://form.typeform.com/to/Neuhoy24" // Thay bằng URL thực tế của bạn
+            href="https://form.typeform.com/to/Neuhoy24"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -52,7 +52,7 @@ export default function Section2() {
             to check your luck.
           </p>
           <a
-            href="https://x.com/chaosnft_xyz" // Liên kết đến trang Twitter chính
+            href="https://x.com/chaosnft_xyz"
             target="_blank"
             rel="noopener noreferrer"
           >

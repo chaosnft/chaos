@@ -51,7 +51,7 @@ export default function Loading({ onComplete }) {
       <div className="flex flex-col items-center space-y-9">
         <div className="mb-6">
           <Image
-            src="/images/chaos.gif" // Thay bằng đường dẫn GIF thực tế sau
+            src="/images/chaos.gif"
             alt="Web3 Logo"
             width={400}
             height={400}
@@ -62,9 +62,6 @@ export default function Loading({ onComplete }) {
           text="Loading..."
           className="text-[32px] sm:text-[36px] md:text-[40px] font-bold text-navy-black text-center"
         />
-        {/* <p className="text-[32px] sm:text-[36px] md:text-[40px] font-bold text-navy-black text-center">
-          Loading...
-        </p> */}
         <div className="w-2/3 sm:w-2/3 md:w-2/3 lg:w-7/12 h-7 sm:h-7.5 md:h-9 bg-dark-brown rounded-full relative border-4 border-black">
           <motion.div
             className="h-full bg-blue rounded-full text-ivory"

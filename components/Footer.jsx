@@ -10,7 +10,6 @@ export default function Footer() {
     }
   };
 
-  // Định nghĩa các liên kết mạng xã hội
   const socialLinks = [
     { platform: 'x', url: 'https://x.com/chaosnft_xyz', icon: '/icons/x.png' },
     { platform: 'discord', url: '', icon: '/icons/discord.png' },
@@ -50,7 +49,7 @@ export default function Footer() {
                 transition={{ duration: 0.3 }}
                 className={`flex justify-center items-center relative min-w-[40px] min-h-[40px] sm:min-w-[48px] sm:min-h-[48px] md:min-w-[56px] md:min-h-[56px] group ${
                   platform === 'discord' ? 'cursor-default' : ''
-                }`} // Thêm cursor-default cho Discord vì không có URL
+                }`} 
               >
                 {platform === 'discord' ? (
                   <>

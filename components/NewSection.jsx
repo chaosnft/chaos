@@ -15,7 +15,7 @@ export default function NewSection() {
         className="relative w-[85vw] h-[95vh] border-4 border-white rounded-3xl flex flex-col items-center justify-start shadow-cartoon p-4 sm:p-6 md:p-8 mt-10 mb-10 overflow-hidden"
       >
         <Image
-          src="/images/background.png" // Thay bằng ảnh PNG thực
+          src="/images/background.png" 
           alt="Background"
           layout="fill"
           objectFit="cover"

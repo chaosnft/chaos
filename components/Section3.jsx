@@ -1,6 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import AnimatedText from './AnimatedText';
 
 export default function Section3({ currentFrame, direction, handlePrev, handleNext, isShopHovered, setIsShopHovered }) {
   const frames = [

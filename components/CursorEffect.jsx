@@ -7,7 +7,7 @@ export default function CursorEffect() {
 
   useEffect(() => {
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-    if (isTouchDevice) return; // Bỏ qua trên touch devices
+    if (isTouchDevice) return; 
 
     let lastX = 0;
     let lastY = 0;
@@ -25,15 +25,15 @@ export default function CursorEffect() {
           color,
           vx: (Math.random() - 0.5) * 8,
           vy: (Math.random() - 0.5) * 8,
-          size: window.innerWidth < 768 ? 15 : 20, // Nhỏ hơn trên mobile
+          size: window.innerWidth < 768 ? 15 : 20, 
           rotate: angles[Math.floor(Math.random() * angles.length)],
         }));
 
-        setParticles((prev) => [...prev, ...newParticles].slice(-40)); // Giảm số hạt
+        setParticles((prev) => [...prev, ...newParticles].slice(-40)); 
 
         setTimeout(() => {
           setParticles((prev) => prev.filter((p) => !newParticles.some((np) => np.id === p.id)));
-        }, 1500); // Giảm thời gian tồn tại
+        }, 1500); 
       }
     };
 

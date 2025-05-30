@@ -15,7 +15,7 @@ export default function HeroSection() {
     >
       <div className="mb-6">
         <Image
-          src="/images/logo.png" // Thay bằng đường dẫn GIF thực tế sau
+          src="/images/logo.png"
           alt="Web3 Logo"
           width={500}
           height={500}

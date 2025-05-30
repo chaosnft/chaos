@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Định nghĩa font */
+
 @font-face {
   font-family: 'HVD Comic Serif Pro';
   src: url('/fonts/HVD_Comic_Serif_Pro.otf') format('opentype');
@@ -35,7 +35,6 @@
   font-display: swap;
 }
 
-/* Áp dụng font mặc định, nhưng không ghi đè màu cho thẻ a và con của nó */
 html,
 body,
 h1,
@@ -50,12 +49,10 @@ div {
   scroll-behavior: smooth;
 }
 
-/* Đảm bảo thẻ a và các phần tử con kế thừa màu từ parent */
 a,
 a>*,
 a>span,
 a>span>span {
-  /* Kế thừa màu từ motion.a */
 }
 
 button:hover {
@@ -118,7 +115,6 @@ button:hover {
   z-index: 1;
 }
 
-/* Hiệu ứng chữ cái rơi xuống */
 .animate-text {
   display: inline-block;
   overflow: hidden;
@@ -197,7 +193,6 @@ button:hover {
   max-width: 70% !important;
 }
 
-/* Media queries bổ sung */
 @media (max-width: 640px) {
 
   html,

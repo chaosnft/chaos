@@ -29,7 +29,7 @@ module.exports = {
         'comic-art': ['Comic-Art', 'cursive']
       },
       backgroundImage: {
-        rainbow: 'linear-gradient(to right, #FF0000, #FFA500, #FFFF00, #008000, #0000FF, #4B0082, #EE82EE)', // 7 màu cầu vồng
+        rainbow: 'linear-gradient(to right, #FF0000, #FFA500, #FFFF00, #008000, #0000FF, #4B0082, #EE82EE)',
       },
     },
   },
