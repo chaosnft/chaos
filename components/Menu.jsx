@@ -5,7 +5,6 @@ import Image from 'next/image';
 
 export default function Menu() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isShopHovered, setIsShopHovered] = useState(false);
 
@@ -25,7 +24,7 @@ export default function Menu() {
   // Định nghĩa các liên kết mạng xã hội
   const socialLinks = [
     { platform: 'x', url: 'https://x.com/chaosnft_xyz', icon: '/icons/x.png' },
-    { platform: 'tiktok', url: 'https://www.tiktok.com/@chaosnft.xyz', icon: '/icons/tiktok.png' }, // Thay bằng URL TikTok thực tế
+    { platform: 'discord', url: '', icon: '/icons/discord.png' },
   ];
 
   return (
@@ -90,7 +89,7 @@ export default function Menu() {
             <div className="flex flex-col space-y-4">
               {/* Nội dung nếu cần */}
             </div>
-            <div className="absolute bottom-6 sm:bottom-8 left-4 sm:left-6 flex space-x-3 sm:space-x-6 text-dark-brown z-50">
+            <div className="absolute bottom-6 sm:bottom-8 left-4 sm:left-6 flex space-x-2 sm:space-x-2 text-dark-brown z-50">
               {socialLinks.map(({ platform, url, icon }) => (
                 <motion.a
                   key={platform}
@@ -100,15 +99,32 @@ export default function Menu() {
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 1.2 }}
                   transition={{ duration: 0.3 }}
-                  className="flex items-center"
+                  className={`flex justify-center items-center relative min-w-[40px] min-h-[40px] sm:min-w-[48px] sm:min-h-[48px] md:min-w-[56px] md:min-h-[56px] group ${
+                    platform === 'discord' ? 'cursor-default' : ''
+                  }`}
                 >
-                  <Image
-                    src={icon}
-                    alt={platform}
-                    width={24}
-                    height={24}
-                    className="w-6 h-6 sm:w-6 sm:h-6 md:w-8 md:h-8"
-                  />
+                  {platform === 'discord' ? (
+                    <>
+                      <Image
+                        src={icon}
+                        alt={platform}
+                        width={24}
+                        height={24}
+                        className="w-6 h-6 sm:w-6 sm:h-6 md:w-8 md:h-8 z-10 transition-opacity duration-300 group-hover:opacity-0"
+                      />
+                      <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-sm sm:text-base md:text-lg font-bold uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+                        SOON
+                      </span>
+                    </>
+                  ) : (
+                    <Image
+                      src={icon}
+                      alt={platform}
+                      width={24}
+                      height={24}
+                      className="w-6 h-6 sm:w-6 sm:h-6 md:w-8 md:h-8 z-10"
+                    />
+                  )}
                 </motion.a>
               ))}
             </div>
@@ -116,7 +132,6 @@ export default function Menu() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2 md:mt-0 w-full md:w-1/2 uppercase pr-4 sm:pr-6 md:pr-8">
             {[
               { href: '#section3', text: 'Apparel' },
-              { href: '#section4', text: 'ART' },
               { href: '#shop', text: 'Shop' },
               { href: '#squares', text: 'About Us' },
             ].map((item) => (

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import AnimatedText from './AnimatedText';
 import Image from 'next/image';
+import AnimatedTextTyping from './AnimatedTextTyping';
 
 export default function HeroSection() {
   return (
@@ -21,14 +22,21 @@ export default function HeroSection() {
           className="w-84 sm:w-90 md:w-120 lg:w-[548px] h-auto mx-auto"
         />
       </div>
-      <AnimatedText
+      <div className="max-w-3xl mx-auto mb-6 sm:mb-8">
+        <AnimatedTextTyping
         text="THE POWER OF ELEMENTS"
-        className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-navy-black mb-4 uppercase"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-navy-black mb-4 uppercase"
       />
-      <AnimatedText
-        text="THE FOUNDATIONS OF CONNECTION, CREATIVITY AND ART."
-        className="text-base sm:text-lg md:text-xl lg:text-1xl text-navy-black mb-6 sm:mb-8"
-      />
+        <AnimatedText
+          text="THE FOUNDATIONS OF CONNECTION"
+          className="text-sm sm:text-lg md:text-xl lg:text-2xl text-navy-black whitespace-normal overflow-wrap break-word"
+        />
+        <AnimatedText
+          text="CREATIVITY AND ART."
+          className="text-sm sm:text-lg md:text-xl lg:text-2xl text-navy-black whitespace-normal overflow-wrap break-word"
+        />
+      </div>
+      
       <Link href="https://form.typeform.com/to/Neuhoy24" target="_blank">
         <motion.button
           initial={{ opacity: 0, y: -100 }}

@@ -152,7 +152,7 @@ export default function Home() {
         isShopHovered={isShopHovered}
         setIsShopHovered={setIsShopHovered}
       />
-      <Section4 images={images} imageOrder1={imageOrder1} imageOrder2={imageOrder2} rowVariants={rowVariants} />
+      {/* <Section4 images={images} imageOrder1={imageOrder1} imageOrder2={imageOrder2} rowVariants={rowVariants} /> */}
       <Footer />
     </div>
   );

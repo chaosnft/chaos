@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import AnimatedTextTyping from './AnimatedTextTyping';
 
 export default function Loading({ onComplete }) {
   const [progress, setProgress] = useState(0);
@@ -57,9 +58,13 @@ export default function Loading({ onComplete }) {
             className="w-64 sm:w-80 md:w-96 lg:w-[448px] h-auto mx-auto"
           />
         </div>
-        <p className="text-[32px] sm:text-[36px] md:text-[40px] font-bold text-navy-black text-center">
-          Loading Web3 Adventure...
-        </p>
+        <AnimatedTextTyping
+          text="Loading..."
+          className="text-[32px] sm:text-[36px] md:text-[40px] font-bold text-navy-black text-center"
+        />
+        {/* <p className="text-[32px] sm:text-[36px] md:text-[40px] font-bold text-navy-black text-center">
+          Loading...
+        </p> */}
         <div className="w-2/3 sm:w-2/3 md:w-2/3 lg:w-7/12 h-7 sm:h-7.5 md:h-9 bg-dark-brown rounded-full relative border-4 border-black">
           <motion.div
             className="h-full bg-blue rounded-full text-ivory"

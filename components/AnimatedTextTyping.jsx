@@ -28,7 +28,7 @@ export default function AnimatedTextTyping({ text, className = '' }) {
                 setIsTypingComplete(true);
                 clearInterval(typingInterval);
             }
-        }, 100); // Tốc độ đánh chữ: 100ms mỗi ký tự
+        }, 200); // Tốc độ đánh chữ: 100ms mỗi ký tự
 
         return () => clearInterval(typingInterval);
     }, [isInView, text]);

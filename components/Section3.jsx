@@ -7,8 +7,8 @@ export default function Section3({ currentFrame, direction, handlePrev, handleNe
     { id: 1, title: 'Style', content: 'NFT-inspired designs are incorporated into our products', image: '/images/frame1.webp' },
     { id: 2, title: 'NFT', content: 'We build a community that loves art, nature and NFTs', image: '/images/frame2.webp' },
     { id: 3, title: 'Utility', content: 'Our community will get early access to new product launches, or community events.', image: '/images/frame3.webp' },
-    { id: 4, title: 'Fashion', content: 'Our community will get early access to new product launches, or community events.', image: '/images/frame4.webp' },
-];
+    { id: 4, title: 'Merch', content: 'Rewards for those who trust and share the same interests.', image: '/images/frame4.webp' },
+  ];
 
   return (
     <section id="section3" className="min-h-screen flex flex-col items-center justify-center bg-light-blue m-0 p-0 border-t-4 border-b-4 border-dark-brown overflow-x-hidden z-20">
@@ -30,7 +30,7 @@ export default function Section3({ currentFrame, direction, handlePrev, handleNe
           </motion.button>
           <motion.button
             onClick={handleNext}
-            className="relative w-16 h-12 sm:w-20 sm:h-14 bg-dark-brown text-white text-lg border-4 border-black rounded-full shadow-cartoon hover-scan hover:translate-x-1 hover:translate-y-1 hover:brightness-90 transition-transform duration-300 z-20"
+            className="relative w-16 h-12 sm:w-20 sm:h-14 bg-navy-black text-white text-lg border-4 border-black rounded-full shadow-cartoon hover-scan hover:translate-x-1 hover:translate-y-1 hover:brightness-90 transition-transform duration-300 z-20"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
@@ -49,7 +49,7 @@ export default function Section3({ currentFrame, direction, handlePrev, handleNe
           </motion.button>
 
           <div className="w-11/12 sm:w-3/4 h-[80vh] md:min-h-[60vh] md:h-auto flex flex-col md:flex-row items-center justify-between bg-white border-4 border-black rounded-2xl shadow-cartoon p-4 sm:p-6 md:p-8 box-border z-20">
-            <div className="w-full md:w-1/2 flex items-center justify-center mt-4 md:mt-0 order-1 md:order-0">
+            <div className="w-full md:w-1/2 flex items-center justify-center mt-2 md:mt-0 order-1 md:order-0">
               <AnimatePresence mode="wait" initial={false}>
                 <motion.div
                   key={currentFrame}
@@ -85,7 +85,7 @@ export default function Section3({ currentFrame, direction, handlePrev, handleNe
                   <p className="text-base sm:text-lg md:text-xl text-navy-black max-w-full overflow-wrap-break-word whitespace-normal max-h-[20vh] overflow-y-auto mb-4">
                     {frames[currentFrame].content}
                   </p>
-                  <motion.button
+                  {/* <motion.button
                     onMouseEnter={() => setIsShopHovered(true)}
                     onMouseLeave={() => setIsShopHovered(false)}
                     className="relative w-3/4 px-6 py-3 sm:px-8 sm:py-4 sm:w-1/3 bg-navy-black text-white text-lg sm:text-xl md:text-2xl border-4 border-black rounded-2xl self-center md:self-start hover-scan hover:translate-x-1 hover:translate-y-1 hover:brightness-90 transition-transform duration-300 z-20 shadow-cartoon mt-4"
@@ -97,7 +97,7 @@ export default function Section3({ currentFrame, direction, handlePrev, handleNe
                       className="text-lg sm:text-xl md:text-2xl text-ivory"
                       style={{ color: 'inherit' }}
                     />
-                  </motion.button>
+                  </motion.button> */}
                 </motion.div>
               </AnimatePresence>
             </div>

@@ -6,10 +6,10 @@ export default function Section2() {
       <div className="flex flex-col md:flex-row w-full min-h-screen border-b-2 border-dark-brown">
         <div className="w-full md:w-1/2 bg-light-yellow min-h-[50vh] md:min-h-screen flex flex-col items-center justify-center text-center p-4 sm:p-6 md:p-8">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase font-bold text-navy-black mb-4">
-            Register Whitelist
+            Whitelist
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-navy-black mb-6">
-            We strive to build a passionate community where elemental stories are told through unique NFT art and fashion.
+            We strive to build a passionate community where elemental stories are told through unique NFT art and fashion.Sign up to get a Whitelist spot and start your journey
           </p>
           <a
             href="https://form.typeform.com/to/Neuhoy24" // Thay bằng URL thực tế của bạn
@@ -17,11 +17,11 @@ export default function Section2() {
             rel="noopener noreferrer"
           >
             <motion.button
-              className="relative px-6 py-3 sm:px-8 sm:py-4 bg-navy-black text-ivory text-lg sm:text-2xl md:text-3xl lg:text-4xl border-4 border-black rounded-2xl hover-scan hover:translate-x-1 hover:translate-y-1 hover:brightness-90 transition-all duration-300 shadow-cartoon z-10"
+              className="relative w-40 mt-5 sm:w-full px-6 py-3 sm:px-8 sm:py-4 bg-navy-black text-ivory text-lg sm:text-2xl md:text-3xl lg:text-4xl border-4 border-black rounded-2xl hover-scan hover:translate-x-1 hover:translate-y-1 hover:brightness-90 transition-all duration-300 shadow-cartoon z-10"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              Whitelist
+              Register
             </motion.button>
           </a>
         </div>
@@ -57,7 +57,7 @@ export default function Section2() {
             rel="noopener noreferrer"
           >
             <motion.button
-              className="relative px-6 py-3 sm:px-8 sm:py-4 bg-navy-black text-ivory text-lg sm:text-2xl md:text-3xl lg:text-4xl border-4 border-black rounded-2xl hover-scan hover:translate-x-1 hover:translate-y-1 hover:brightness-90 transition-all duration-300 shadow-cartoon z-30"
+              className="relative w-40 sm:w-full px-6 py-3 sm:px-8 sm:py-4 bg-navy-black text-ivory text-lg sm:text-2xl md:text-3xl lg:text-4xl border-4 border-black rounded-2xl hover-scan hover:translate-x-1 hover:translate-y-1 hover:brightness-90 transition-all duration-300 shadow-cartoon z-30"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >

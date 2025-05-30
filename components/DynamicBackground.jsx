@@ -14,7 +14,7 @@ export default function DynamicBackground() {
   }, []);
 
   const handleLogoClick = () => {
-    const section4 = document.querySelector('#section4');
+    const section4 = document.querySelector('#section2');
     if (section4) {
       section4.scrollIntoView({ behavior: 'smooth' });
     }
