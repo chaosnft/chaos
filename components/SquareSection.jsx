@@ -18,7 +18,7 @@ export default function SquareSection() {
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-ivory mb-4 uppercase"
         />
         <p className="text-base sm:text-lg md:text-xl text-ivory text-center max-w-full overflow-wrap-break-word whitespace-normal mb-5 mt-5">
-          Welcome to the world of Chaos, a unique NFT brand inspired by the five natural elements: Fire, Ice, Tree, Wind, and Earth, that inspires creativity, freedom, and community.
+          Welcome to the world of Chaos, a unique NFT brand inspired by the five natural elements: Fire, Ice, Tree, Wind, Water and Earth, that inspires creativity, freedom, and community.
           Chaos offers exclusive NFT collections, apparel, accessories, and digital experiences. We believe that the power of nature can inspire imagination, and we are committed to helping you explore the magic of the elements through art and style.
           Whether it's a blazing fire or a free-flowing breeze, let our elemental family bring warmth and personality to your journey!
           <br></br>

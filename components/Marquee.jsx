@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import AnimatedText from './AnimatedText';
 
 export default function Marquee() {
-  const singleText = 'WHITELIST OPEN !!     ';
+  const singleText = 'WHITELIST IS OPEN !     ';
   const text = singleText.repeat(10); 
 
   return (

@@ -103,14 +103,14 @@ As the elements stood divided, the Void grew stronger, its shadows coiling aroun
       transition={{ duration: 0.5 }}
       className="fixed inset-0 bg-ivory flex items-center justify-center z-50"
     >
-        <motion.button
-          onClick={onClose}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="absolute top-4 right-4 bg-red-600 text-ivory text-lg sm:text-xl font-bold uppercase px-4 py-2 border-2 border-black rounded-lg shadow-cartoon hover:brightness-90 transition-all duration-300 z-30"
-        >
-          Close
-        </motion.button>
+      <motion.button
+        onClick={onClose}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className="absolute top-4 right-4 bg-red-600 text-ivory text-lg sm:text-xl font-bold uppercase px-4 py-2 border-2 border-black rounded-lg shadow-cartoon hover:brightness-90 transition-all duration-300 z-30"
+      >
+        Close
+      </motion.button>
 
       <div className="relative w-[95vw] h-[85vh] bg-ivory border-4 border-black rounded-2xl shadow-cartoon mt-14">
         <Image
@@ -118,12 +118,12 @@ As the elements stood divided, the Void grew stronger, its shadows coiling aroun
           alt="Background"
           layout="fill"
           objectFit="cover"
-          className="absolute inset-0 z-10 pointer-events-none"
+          className="absolute inset-0 z-10 pointer-events-none rounded-xl"
         />
 
         <div
-          className="relative mx-6 sm:mx-8 mt-4  max-h-[calc(100%-2rem)] min-h-0 overflow-y-scroll bg-ivory/80 rounded-lg p-8 z-20 pointer-events-auto overscroll-contain scroll-smooth scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-200"
-          onMouseEnter={() => console.log('Hovering over scrollable text area')} 
+          className="relative mx-4 sm:mx-8 mt-4  max-h-[calc(100%-2rem)] min-h-0 overflow-y-scroll bg-ivory/80 rounded-lg p-2 z-20 pointer-events-auto overscroll-contain scroll-smooth scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-200"
+          // onMouseEnter={() => console.log('Hovering over scrollable text area')}
         >
           <h1 className="text-navy-black text-xl sm:text-3xl md:text-4xl font-bold text-center mb-4 uppercase mb-8">
             {introText}
@@ -131,11 +131,10 @@ As the elements stood divided, the Void grew stronger, its shadows coiling aroun
           {textSegments.map((segment, index) => (
             <p
               key={index}
-              className={`text-navy-black mb-4 ${
-                segment.type === 'highlight'
+              className={`text-navy-black mb-4 ${segment.type === 'highlight'
                   ? 'text-1/4xl sm:text-2xl font-bold m-16 uppercase'
                   : 'text-sm sm:text-lg md:text-1/2xl leading-relaxed m-4'
-              }`}
+                }`}
             >
               {segment.content}
             </p>

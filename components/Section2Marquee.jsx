@@ -12,7 +12,7 @@ export default function Section2Marquee() {
           className="whitespace-nowrap"
         >
           <AnimatedText
-            text={"NON-FUNGIBLE TOKEN ON ETHEREUM !!     ".repeat(6)}
+            text={"NON-FUNGIBLE TOKEN ON ETHEREUM !!     ".repeat(10)}
             className="text-2xl sm:text-3xl md:text-4xl font-bold text-white inline-block mt-2"
           />
         </motion.div>
