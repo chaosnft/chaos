@@ -29,7 +29,6 @@ export default function Home() {
       }
     };
 
-    // Chỉ thêm sự kiện cuộn khi modal không mở
     if (!isChapterModalOpen) {
       window.addEventListener('wheel', handleScroll, { passive: false });
     }
@@ -55,7 +54,6 @@ export default function Home() {
     '/images/nftshadow1.webp',
     '/images/nftshadow2.webp',
     '/images/nftshadow3.webp',
-    // ... các ảnh khác
   ];
 
   const [imageOrder1, setImageOrder1] = useState([...Array(images.length).keys()]);
