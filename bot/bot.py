@@ -15,7 +15,7 @@ ACCESS_TOKEN = "1928028289416974340-xxX9g7fr8Pj9VWLj4yk75MxxlQ6qS8"
 ACCESS_TOKEN_SECRET = "qBDa7r0lcb7yZnfzVu4F3hxHb2W5kHqxQXZtAjY3CTtae"
 
 # Grok API configuration
-GROK_API_KEY = "xai-MrFDdaILEDDORlbGBmnsT9yog8dH9yV7DVwWZzb4mk36OdjtjSTh53t3pCGslwLigxq8Ran1UiQB5AWj"  # Replace with your xAI API key
+GROK_API_KEY = ""  # Replace with your xAI API key
 GROK_API_URL = "https://api.x.ai/v1/chat/completions"
 
 # Initialize Tweepy client for API v2
