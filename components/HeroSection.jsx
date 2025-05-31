@@ -13,7 +13,7 @@ export default function HeroSection() {
       transition={{ duration: 0.8 }}
       className="min-h-screen flex flex-col items-center justify-center bg-ivory px-4 sm:px-6 md:px-8 text-center"
     >
-      <div className="mb-6">
+      <div className="mb-10">
         <Image
           src="/images/logo.png"
           alt="Web3 Logo"
@@ -22,7 +22,7 @@ export default function HeroSection() {
           className="w-84 sm:w-90 md:w-120 lg:w-[548px] h-auto mx-auto"
         />
       </div>
-      <div className="max-w-3xl mx-auto mb-6 sm:mb-8">
+      <div className="max-w-3xl mx-auto mb-4 sm:mb-8">
         <AnimatedTextTyping
         text="THE POWER OF ELEMENTS"
         className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-navy-black mb-4 uppercase"

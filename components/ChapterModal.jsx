@@ -124,7 +124,7 @@ As the elements stood divided, the Void grew stronger, its shadows coiling aroun
       >
         Close
       </motion.button>
-      <div className="relative w-[95vw] h-[85vh] bg-ivory border-4 border-black rounded-2xl shadow-cartoon p-6 mt-12 sm:p-8">
+      <div className="relative w-[95vw] h-[80vh] bg-ivory border-4 border-black rounded-2xl shadow-cartoon p-4 mt-14 sm:p-8">
         <Image
           src="/images/background.png"
           alt="Background"
@@ -134,7 +134,6 @@ As the elements stood divided, the Void grew stronger, its shadows coiling aroun
         />
         <div
           className="relative mx-1 sm:mx-4 mb-4 max-h-[calc(100%)] min-h-0 overflow-y-auto bg-ivory/80 rounded-lg p-4 z-20 pointer-events-auto overscroll-contain scroll-smooth hide-scrollbar"
-          onMouseEnter={() => console.log('Hovering over scrollable text area')}
         >
           <h1 className="text-navy-black text-xl sm:text-3xl md:text-4xl font-bold text-center mt-10 mb-8 uppercase">
             {introText}

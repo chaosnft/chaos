@@ -48,7 +48,7 @@ export default function Loading({ onComplete }) {
 
   return (
     <div className="fixed inset-0 bg-ivory flex items-center justify-center z-50">
-      <div className="flex flex-col items-center space-y-9">
+      <div className="flex flex-col items-center space-y-3">
         <div className="mb-6">
           <Image
             src="/images/chaos.gif"
@@ -59,7 +59,7 @@ export default function Loading({ onComplete }) {
           />
         </div>
         <AnimatedTextTyping
-          text="Get ready for an epic journey...!"
+          text="Loading..."
           className="text-[16px] sm:text-[22px] md:text-[26px] font-bold text-navy-black text-center"
         />
         <div className="w-2/3 sm:w-2/3 md:w-2/3 lg:w-7/12 h-7 sm:h-7.5 md:h-9 bg-dark-brown rounded-full relative border-4 border-black">
