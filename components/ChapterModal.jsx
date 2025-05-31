@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -95,6 +96,15 @@ As the elements stood divided, the Void grew stronger, its shadows coiling aroun
     { type: 'text', content: longText10 },
   ];
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+    return () => document.body.classList.remove('overflow-hidden'); // Cleanup
+  }, [isOpen]);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -122,7 +132,12 @@ As the elements stood divided, the Void grew stronger, its shadows coiling aroun
         />
 
         <div
-          className="relative mx-4 sm:mx-8 mt-4  max-h-[calc(100%-2rem)] min-h-0 overflow-y-scroll bg-ivory/80 rounded-lg p-2 z-20 pointer-events-auto overscroll-contain scroll-smooth scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-200"
+          className="relative mx-4 sm:mx-8 mt-8 sm:mt-10 max-h-[calc(95vh-9rem)] min-h-0 overflow-y-scroll bg-ivory/80 rounded-lg p-4 sm:p-6 z-20 pointer-events-auto overscroll-contain scroll-smooth hide-scrollbar"
+          onWheel={(e) => {
+            e.stopPropagation();
+            const container = e.currentTarget;
+            container.scrollTop += e.deltaY;
+          }}
         >
           <h1 className="text-navy-black text-xl sm:text-3xl md:text-4xl font-bold text-center mb-4 uppercase mb-8">
             {introText}
@@ -131,8 +146,8 @@ As the elements stood divided, the Void grew stronger, its shadows coiling aroun
             <p
               key={index}
               className={`text-navy-black mb-4 ${segment.type === 'highlight'
-                  ? 'text-1/4xl sm:text-2xl font-bold m-16 uppercase'
-                  : 'text-sm sm:text-lg md:text-1/2xl leading-relaxed m-4'
+                ? 'text-1/4xl sm:text-2xl font-bold m-16 uppercase'
+                : 'text-sm sm:text-lg md:text-1/2xl leading-relaxed m-4'
                 }`}
             >
               {segment.content}
