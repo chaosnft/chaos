@@ -6,12 +6,12 @@ export default function ChapterModal({ isOpen, onClose }) {
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden'; // Ngăn cuộn trang nền
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = ''; // Khôi phục cuộn khi đóng modal
+      document.body.style.overflow = ''; 
     }
     return () => {
-      document.body.style.overflow = ''; // Dọn dẹp khi component unmount
+      document.body.style.overflow = ''; 
     };
   }, [isOpen]);
 
