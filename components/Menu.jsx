@@ -29,26 +29,26 @@ export default function Menu() {
   return (
     <>
       <div
-        className={`fixed top-4 left-4 sm:left-6 md:left-10 z-50 flex items-center space-x-3 sm:space-x-4 transition-opacity duration-300 ${
-          isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
-        }`}
+        className={`fixed top-4 left-4 sm:left-6 md:left-10 z-50 flex items-center space-x-3 sm:space-x-4 transition-opacity duration-300 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
+          }`}
       >
         <motion.button
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           onClick={() => setIsOpen(!isOpen)}
-          className={`relative flex items-center justify-center space-x-2 px-4 py-2 w-40 sm:w-48 md:w-36 h-12 sm:h-14 border-navy-black border-4 rounded-2xl hover-scan hover:translate-x-1 hover:translate-y-1 hover:brightness-90 transition-all duration-300 shadow-cartoon ${
-            isOpen ? 'bg-red-600 text-ivory' : 'bg-white text-dark-brown'
-          }`}
+          className={`relative flex items-center justify-center space-x-2 px-4 py-2 w-40 sm:w-48 md:w-36 h-12 sm:h-14 rounded-2xl hover-scan hover:translate-x-1 hover:translate-y-1 hover:brightness-90 transition-all duration-300 shadow-cartoon ${isOpen
+              ? 'bg-red-600 text-ivory border-4 border-dark-brown'
+              : 'bg-white text-dark-brown border-4 border-navy-black'
+            }`}
         >
           <AnimatedText
             text={isOpen ? 'Close' : 'Menu'}
-            className={`text-navy-black sm:text-lg md:text-xl font-bold uppercase`}
+            className={`sm:text-lg md:text-xl font-bold uppercase`}
             style={{ color: 'inherit' }}
           />
           <svg
-            className={`w-5 h-5 sm:w-6 sm:h-6 ${isOpen ? 'stroke-black' : 'stroke-dark-brown'}`}
+            className={`w-5 h-5 sm:w-6 sm:h-6 ${isOpen ? 'stroke-ivory' : 'stroke-dark-brown'}`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -98,9 +98,8 @@ export default function Menu() {
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 1.2 }}
                   transition={{ duration: 0.3 }}
-                  className={`flex justify-center items-center relative min-w-[40px] min-h-[40px] sm:min-w-[48px] sm:min-h-[48px] md:min-w-[56px] md:min-h-[56px] group ${
-                    platform === 'discord' ? 'cursor-default' : ''
-                  }`}
+                  className={`flex justify-center items-center relative min-w-[40px] min-h-[40px] sm:min-w-[48px] sm:min-h-[48px] md:min-w-[56px] md:min-h-[56px] group ${platform === 'discord' ? 'cursor-default' : ''
+                    }`}
                 >
                   {platform === 'discord' ? (
                     <>

@@ -47,7 +47,7 @@ export default function Section3({ currentFrame, direction, handlePrev, handleNe
             <span className="text-2xl md:text-3xl font-bold">&lt;</span>
           </motion.button>
 
-          <div className="w-11/12 sm:w-3/4 h-[80vh] md:min-h-[60vh] md:h-auto flex flex-col md:flex-row items-center justify-between bg-white border-4 border-black rounded-2xl shadow-cartoon p-4 sm:p-6 md:p-8 box-border z-20">
+          <div className="w-11/12 sm:w-3/4 h-[80vh] md:min-h-[60vh] md:h-auto flex flex-col md:flex-row items-center justify-between bg-white border-4 border-black rounded-2xl shadow-cartoon p-4 sm:p-6 md:p-8 box-border z-15">
             <div className="w-full md:w-1/2 flex items-center justify-center mt-2 md:mt-0 order-1 md:order-0">
               <AnimatePresence mode="wait" initial={false}>
                 <motion.div

@@ -30,7 +30,7 @@ export default function Section2() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase font-bold text-ivory mb-4">
             Join the Community
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-ivory mb-6 max-w-full overflow-wrap-break-word whitespace-normal text-center z-20">
+          <p className="text-base sm:text-lg md:text-xl text-ivory mb-6 max-w-full overflow-wrap-break-word whitespace-normal text-center z-15">
             Follow the main{' '}
             <a
               href="https://x.com/chaosnft_xyz"

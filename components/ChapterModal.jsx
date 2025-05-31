@@ -123,7 +123,6 @@ As the elements stood divided, the Void grew stronger, its shadows coiling aroun
 
         <div
           className="relative mx-4 sm:mx-8 mt-4  max-h-[calc(100%-2rem)] min-h-0 overflow-y-scroll bg-ivory/80 rounded-lg p-2 z-20 pointer-events-auto overscroll-contain scroll-smooth scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-200"
-          // onMouseEnter={() => console.log('Hovering over scrollable text area')}
         >
           <h1 className="text-navy-black text-xl sm:text-3xl md:text-4xl font-bold text-center mb-4 uppercase mb-8">
             {introText}
