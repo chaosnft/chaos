@@ -12,8 +12,11 @@ import Section2 from '../components/Section2';
 import Section3 from '../components/Section3';
 import Section4 from '../components/Section4';
 import Footer from '../components/Footer';
+import ChapterModal from '../components/ChapterModal';
 
 export default function Home() {
+  const [isChapterModalOpen, setIsChapterModalOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = (e) => {
       if (window.innerWidth > 768) {
@@ -26,9 +29,12 @@ export default function Home() {
       }
     };
 
-    window.addEventListener('wheel', handleScroll, { passive: false });
+    // Chỉ thêm sự kiện cuộn khi modal không mở
+    if (!isChapterModalOpen) {
+      window.addEventListener('wheel', handleScroll, { passive: false });
+    }
     return () => window.removeEventListener('wheel', handleScroll);
-  }, []);
+  }, [isChapterModalOpen]);
 
   const [currentFrame, setCurrentFrame] = useState(0);
   const [direction, setDirection] = useState(0);
@@ -49,34 +55,7 @@ export default function Home() {
     '/images/nftshadow1.webp',
     '/images/nftshadow2.webp',
     '/images/nftshadow3.webp',
-    '/images/nftshadow.webp',
-    '/images/nftshadow1.webp',
-    '/images/nftshadow2.webp',
-    '/images/nftshadow3.webp',
-    '/images/nftshadow.webp',
-    '/images/nftshadow1.webp',
-    '/images/nftshadow2.webp',
-    '/images/nftshadow3.webp',
-    '/images/nftshadow.webp',
-    '/images/nftshadow1.webp',
-    '/images/nftshadow2.webp',
-    '/images/nftshadow3.webp',
-    '/images/nftshadow.webp',
-    '/images/nftshadow1.webp',
-    '/images/nftshadow2.webp',
-    '/images/nftshadow3.webp',
-    '/images/nftshadow.webp',
-    '/images/nftshadow1.webp',
-    '/images/nftshadow2.webp',
-    '/images/nftshadow3.webp',
-    '/images/nftshadow.webp',
-    '/images/nftshadow1.webp',
-    '/images/nftshadow2.webp',
-    '/images/nftshadow3.webp',
-    '/images/nftshadow.webp',
-    '/images/nftshadow1.webp',
-    '/images/nftshadow2.webp',
-    '/images/nftshadow3.webp',
+    // ... các ảnh khác
   ];
 
   const [imageOrder1, setImageOrder1] = useState([...Array(images.length).keys()]);
@@ -138,7 +117,8 @@ export default function Home() {
       <Menu />
       <HeroSection />
       <Marquee />
-      <NewSection />
+      <NewSection setIsChapterModalOpen={setIsChapterModalOpen} />
+      <ChapterModal isOpen={isChapterModalOpen} onClose={() => setIsChapterModalOpen(false)} />
       <div className="flex flex-col m-0 p-0">
         <Section2Marquee />
         <Section2 />
@@ -152,7 +132,6 @@ export default function Home() {
         isShopHovered={isShopHovered}
         setIsShopHovered={setIsShopHovered}
       />
-      {/* <Section4 images={images} imageOrder1={imageOrder1} imageOrder2={imageOrder2} rowVariants={rowVariants} /> */}
       <Footer />
     </div>
   );

@@ -1,12 +1,8 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 import AnimatedTextTyping from './AnimatedTextTyping';
 import Image from 'next/image';
-import ChapterModal from './ChapterModal';
 
-export default function NewSection() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
+export default function NewSection({ setIsChapterModalOpen }) {
   return (
     <section
       id="new-section"
@@ -26,8 +22,8 @@ export default function NewSection() {
           className="absolute inset-0 z-0"
         />
         <div className="relative z-10 w-full flex flex-col items-end">
-          <motion.a
-            onClick={() => setIsModalOpen(true)}
+          <motion.div
+            onClick={() => setIsChapterModalOpen(true)}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className="cursor-pointer"
@@ -36,14 +32,13 @@ export default function NewSection() {
               text="Chapter 1 :"
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-navy-black mt-4 self-end mr-4 uppercase drop-shadow-md"
             />
-          </motion.a>
+          </motion.div>
           <AnimatedTextTyping
             text="Join the CHAOS."
             className="text-sm sm:text-lg md:text-2xl text-navy-black text-right max-w-[90%] px-2 overflow-wrap-break-word whitespace-normal mt-4 drop-shadow-md"
           />
         </div>
       </motion.div>
-      <ChapterModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

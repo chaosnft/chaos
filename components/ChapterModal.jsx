@@ -3,6 +3,18 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 export default function ChapterModal({ isOpen, onClose }) {
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'; // Ngăn cuộn trang nền
+    } else {
+      document.body.style.overflow = ''; // Khôi phục cuộn khi đóng modal
+    }
+    return () => {
+      document.body.style.overflow = ''; // Dọn dẹp khi component unmount
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   const introText = "Chapter 1: The Genesis - Awakening of the Elements";
@@ -96,15 +108,6 @@ As the elements stood divided, the Void grew stronger, its shadows coiling aroun
     { type: 'text', content: longText10 },
   ];
 
-  useEffect(() => {
-    if (isOpen) {
-      document.body.classList.add('overflow-hidden');
-    } else {
-      document.body.classList.remove('overflow-hidden');
-    }
-    return () => document.body.classList.remove('overflow-hidden'); // Cleanup
-  }, [isOpen]);
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -121,8 +124,7 @@ As the elements stood divided, the Void grew stronger, its shadows coiling aroun
       >
         Close
       </motion.button>
-
-      <div className="relative w-[95vw] h-[85vh] bg-ivory border-4 border-black rounded-2xl shadow-cartoon mt-14">
+      <div className="relative w-[95vw] h-[85vh] bg-ivory border-4 border-black rounded-2xl shadow-cartoon p-6 mt-12 sm:p-8">
         <Image
           src="/images/background.png"
           alt="Background"
@@ -130,25 +132,21 @@ As the elements stood divided, the Void grew stronger, its shadows coiling aroun
           objectFit="cover"
           className="absolute inset-0 z-10 pointer-events-none rounded-xl"
         />
-
         <div
-          className="relative mx-4 sm:mx-8 mt-8 sm:mt-10 max-h-[calc(95vh-9rem)] min-h-0 overflow-y-scroll bg-ivory/80 rounded-lg p-4 sm:p-6 z-20 pointer-events-auto overscroll-contain scroll-smooth hide-scrollbar"
-          onWheel={(e) => {
-            e.stopPropagation();
-            const container = e.currentTarget;
-            container.scrollTop += e.deltaY;
-          }}
+          className="relative mx-1 sm:mx-4 mb-4 max-h-[calc(100%)] min-h-0 overflow-y-auto bg-ivory/80 rounded-lg p-4 z-20 pointer-events-auto overscroll-contain scroll-smooth hide-scrollbar"
+          onMouseEnter={() => console.log('Hovering over scrollable text area')}
         >
-          <h1 className="text-navy-black text-xl sm:text-3xl md:text-4xl font-bold text-center mb-4 uppercase mb-8">
+          <h1 className="text-navy-black text-xl sm:text-3xl md:text-4xl font-bold text-center mt-10 mb-8 uppercase">
             {introText}
           </h1>
           {textSegments.map((segment, index) => (
             <p
               key={index}
-              className={`text-navy-black mb-4 ${segment.type === 'highlight'
-                ? 'text-1/4xl sm:text-2xl font-bold m-16 uppercase'
-                : 'text-sm sm:text-lg md:text-1/2xl leading-relaxed m-4'
-                }`}
+              className={`text-navy-black mb-8 ${
+                segment.type === 'highlight'
+                  ? 'text-xl sm:text-2xl font-bold uppercase mt-16'
+                  : 'text-sm sm:text-lg md:text-xl leading-relaxed'
+              }`}
             >
               {segment.content}
             </p>

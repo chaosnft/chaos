@@ -66,10 +66,9 @@ def generate_tweet_text(handle):
             "Content-Type": "application/json"
         }
         prompt = (
-            f"Write a short tweet (under 280 characters) to welcome a new member to the CHAOS adventure. "
+            f"Write a short, exciting tweet (under 280 characters) to welcome a new member to the CHAOS adventure , only use hastag #CHAO , #NFT "
             f"Include the Twitter handle {handle} in the text. Use a positive, epic tone similar to: "
-            f"'The air is moving stronger, it seems like something is coming, that is {handle} has joined the adventure of CHAOS. Congratulations!' "
-            f"Only use hashtags #CHAOS and #NFT. Do not use emojis or other hashtags."
+            f"'The air is moving stronger, it seems like something is coming, that is {handle} has joined the adventure of CHAOS. Congratulations!'"
         )
         data = {
             "model": "grok-3",
@@ -81,15 +80,13 @@ def generate_tweet_text(handle):
         response.raise_for_status()
         tweet_text = response.json()['choices'][0]['message']['content'].strip()
         if handle not in tweet_text:
-            tweet_text = f"{tweet_text} Welcome {handle} #CHAOS #NFT"
-        if "#CHAOS" not in tweet_text or "#NFT" not in tweet_text:
-            tweet_text = f"{tweet_text} #CHAOS #NFT"
+            tweet_text = f"{tweet_text} Welcome {handle}!"
         if len(tweet_text) > 280:
             tweet_text = tweet_text[:277] + "..."
         return tweet_text
     except Exception as e:
         print(f"Error generating tweet with Grok API: {e}")
-        return f"Welcome {handle} to the CHAOS adventure! The journey begins now. #CHAOS #NFT"
+        return f"Welcome {handle} to the CHAOS adventure! The journey begins now. Congratulations!"
 
 # Load data from Google Sheets and update handles.json
 def update_handles_from_sheets():
